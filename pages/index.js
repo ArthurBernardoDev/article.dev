@@ -1,48 +1,71 @@
 import Image from "next/image";
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const ContainerHeader = styled.header`
-max-width: 1600px;
+  max-width: 1600px;
   margin-top: 30px;
-`
+`;
 
 const Content = styled.div`
   display: flex;
   justify-content: space-between;
-`
+`;
 
 const ProfileContainer = styled.div`
   display: flex;
-`
+`;
 
 const ProfileContent = styled.div`
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   margin-right: 15px;
-`
+`;
 const Name = styled.span`
-  text-align: right; 
-  color: white; 
+  text-align: right;
+  color: white;
   font-weight: bold;
-`
+`;
 const Email = styled.span`
-  color: #9699B0; 
+  color: #9699b0;
   margin-top: 5px;
-`
+`;
 
 export default function Home() {
   return (
-    <ContainerHeader >
+    <>
+      <ContainerHeader>
         <Content>
-            <div />
-                <ProfileContainer>
-                    <ProfileContent>
-                    <Name>Arthur Bernardo</Name>
-                    <Email>Contato.arthurbernardoas@gmail.com</Email>
-                    </ProfileContent>
-                    <Image alt={'logo'} src="https://github.com/ArthurBernardoDev.png" style={{borderRadius: '50%'}} width={50} height={50} />
-                </ProfileContainer>
+          <div />
+          <ProfileContainer>
+            <ProfileContent>
+              <Name>Arthur Bernardo</Name>
+              <Email>Contato.arthurbernardoas@gmail.com</Email>
+            </ProfileContent>
+            <Image
+              alt={"logo"}
+              src="https://github.com/ArthurBernardoDev.png"
+              style={{ borderRadius: "50%" }}
+              width={50}
+              height={50}
+            />
+          </ProfileContainer>
         </Content>
-    </ContainerHeader>
-  )
+      </ContainerHeader>
+
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <section
+          style={{
+            marginTop: 50,
+            width: 1100,
+            display: "flex",
+            justifyContent: "center",
+            backgroundColor: "#1F2029",
+            height: 800,
+          }}
+        >
+          <p>teste</p>
+        </section>
+      </div>
+    </>
+  );
 }
